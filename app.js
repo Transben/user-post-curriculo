@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors')
 
 const rotaEscritorio = require('./routes/escritorio');
+const rotaMotorista = require('./routes/motorista');
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
@@ -30,6 +31,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/escritorio', rotaEscritorio);
+app.use('/motorista', rotaMotorista);
 
 // TRATAR ERRO PARA QUANDO NÃO ENCONTRAR NENHUMA ROTA
 app.use((req, res, next) => {
