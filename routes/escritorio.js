@@ -12,7 +12,7 @@ router.post('/', (req, res)=> {
         }
 
         conn.query(
-            process.env.QUERY_POST,
+            'INSERT INTO tabelaEscritorio ( nomeCompleto, CPF, telefoneContato, email, CEP, estado, bairro, rua, numeroCasa, complemento, nomeEmpresa1, cargoEmpresa1, dataInicioEmpresa1, dataFinalEmpresa1, EmpregoAtualEmpresa1, semExperienciaEmpresa1, exercicioCargoAntigoEmpresa1, nomeEmpresa2, cargoEmpresa2, dataInicioEmpresa2, dataFinalEmpresa2, exercicioCargoAntigoEmpresa2,vagaPretendida, aceitoTermo, status, dataEnvioCurriculo) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
             [
                 req.body.nomeCompleto, req.body.CPF, req.body.telefoneContato, 
                 req.body.email, req.body.CEP, req.body.estado, 
