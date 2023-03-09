@@ -12,7 +12,7 @@ router.post('/', (req, res)=> {
         }
 
         conn.query(
-            'INSERT INTO tabelaMotorista (nomeCompleto,CPF,telefoneContato,email,CEP,estado,bairro,rua,numeroCasa,complemento,nomeEmpresa1,cargoEmpresa1,dataInicioEmpresa1,dataFinalEmpresa1,EmpregoAtualEmpresa1,semExperienciaEmpresa1,exercicioCargoAntigoEmpresa1,nomeEmpresa2,cargoEmpresa2,dataInicioEmpresa2,dataFinalEmpresa2,exercicioCargoAntigoEmpresa2,vagaPretendida,aceitoTermo,status,dataEnvioCurriculo) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+            'INSERT INTO tabelaMotorista (nomeCompleto,CPF,telefoneContato,email,CEP,estado,bairro,rua,numeroCasa,complemento,nomeEmpresa1,cargoEmpresa1,dataInicioEmpresa1,dataFinalEmpresa1,EmpregoAtualEmpresa1,semExperienciaEmpresa1,exercicioCargoAntigoEmpresa1,nomeEmpresa2,cargoEmpresa2,dataInicioEmpresa2,dataFinalEmpresa2,exercicioCargoAntigoEmpresa2,nomeEmpresa3,cargoEmpresa3,dataInicioEmpresa3,dataFinalEmpresa3,exercicioCargoAntigoEmpresa3,vagaPretendida,aceitoTermo,numeroCNH,categoriaCNH,validadeCNH,status,dataEnvioCurriculo) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
             [
                 req.body.nomeCompleto,
                 req.body.CPF, 
